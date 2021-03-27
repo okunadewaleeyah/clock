@@ -1,5 +1,7 @@
-// use setInterval to call a certain function every second
-setInterval(setClock, 1000) //every 1000 milisecond, setClock is called
+
+window.addEventListener('load', () => {
+    // use setInterval to call a certain function every second
+    setInterval(setClock, 1000) //every 1000 milisecond, setClock is called
 
 const hourHand = document.querySelector('[data-hour-hand')
 const minuteHand = document.querySelector('[data-minute-hand')
@@ -25,3 +27,4 @@ function setRotation(element, rotationRatio) {
     element.style.setProperty('--rotation', rotationRatio * 360) // *360 to get the element to move from 0deg-360deg
 }
 setClock()
+})
